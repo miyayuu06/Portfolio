@@ -1,0 +1,163 @@
+body {
+  background-color: bisque;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #38444d;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: white;
+  color: #4D4138;
+}
+
+header {
+  padding-top: 12%;
+  padding-bottom: 3%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: rgba(255, 255, 255, 0.6);
+  background-blend-mode: overlay;
+}
+
+h1 {
+  color: #3372CC;
+  font-weight: bold;
+}
+
+p {
+  color: black;
+}
+
+pre {
+  text-wrap: wrap;
+  text-align: justify;
+  margin: 5%;
+}
+
+a {
+  text-decoration: none;
+  color: #008CBA;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+  padding: 5%;
+  padding-top: 0;
+  border: none;
+}
+
+.column {
+  height: 30%;
+  flex: 0 0 auto;
+}
+
+
+.column img {
+  height: 200px;
+  width: auto;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+.column img:hover {
+  border-color: #777;
+}
+
+.project-info {
+  display: flex;               
+  align-items: flex-start;
+  gap: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 2% auto;
+  max-width: 900px;
+  background-color: #fff8f0;
+}
+
+.project-info img {
+  width: 200px;
+  height: auto;
+  border-radius: 5px;
+  flex-shrink: 0;
+}
+
+.project-info video {
+  height: 200px;
+  width: auto;
+  display: block;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+.project-text {
+  text-align: left;
+}
+
+.project-text h2 {
+  margin-top: 0;
+  color: #3372CC;
+}
+
+
+.date {
+  margin: 2%;
+  color: #808080;
+  text-align: center;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.project-nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 60px auto;
+  max-width: 600px;
+}
+
+.project-nav a {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #008CBA;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-nav a:hover {
+  background-color: #005f75;
+}
+
+footer {
+  background-color: #38444d;
+  text-align: center;
+  font-family: sans-serif;
+  color: white;
+  padding: 1%;
+}
