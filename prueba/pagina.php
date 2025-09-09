@@ -14,7 +14,7 @@
   <li><a href="pagina.php">Projects</li>
 </ul>
 
-<header style="background-image:url(photos\renderer\superbanner.png);">
+<header style="background-image:url(photos/renderer/superbanner.png);">
   <h1>YUNA'S PROJECT CORNER</h1>
 </header>
 
@@ -26,16 +26,13 @@
 
 <?php for ($x = 0; $x < count($projects); $x++) : ?>
   <div class="project-info">
-    <img src="photos/<?= $projects[$x]['dir'] ?>/cover.png" alt="<?= $project[$x]['title'] ?> cover preview">
+    <img src="photos/<?= $projects[$x]['dir'] ?>/cover.png" alt="<?= $projects[$x]['title'] ?> cover preview">
     <div class="project-text">
       <h2><a href="individualProject.php?id=<?php echo $x;?>"> <?= $projects[$x]['title']?> </a></h2>
       <p><?= $projects[$x]['desc'] ?></p>
     </div>
   </div>
 <?php endfor; ?>
-
-
-<img src="photos\renderer\superbanner.png" alt="Project Banner">
 
 <footer>Yuna Yunita :)</footer>
 

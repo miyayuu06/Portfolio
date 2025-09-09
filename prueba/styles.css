@@ -67,21 +67,24 @@ a {
   padding: 5%;
   padding-top: 0;
   border: none;
+  box-sizing: border-box;
 }
 
 .column {
   height: 30%;
   flex: 0 0 auto;
+  max-width: 500px;
 }
 
 
-.column img {
+.column img,
+.column video {
   height: 200px;
   width: auto;
+  object-fit: cover;
   display: block;
   border: 2px solid #ccc;
   border-radius: 5px;
-  overflow-x: auto;
 }
 
 .column img:hover {
@@ -136,22 +139,26 @@ a {
 .project-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin: 60px auto;
-  max-width: 600px;
+  max-width: 900px;
+  padding: 0 20px;
 }
 
 .project-nav a {
   display: inline-block;
-  padding: 12px 20px;
-  background-color: #008CBA;
+  padding: 12px 24px;
+  background-color: #38444d;
   color: white;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
+  transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 .project-nav a:hover {
-  background-color: #005f75;
+  background-color: #38444d;
+  transform: translateY(-2px);
 }
 
 footer {

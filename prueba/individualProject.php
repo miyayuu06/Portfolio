@@ -5,7 +5,7 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=1.0">
 <title><?=$projects[$id]['title']?></title>
 </head>
 
@@ -36,7 +36,10 @@
 
 <?php foreach ($projects[$id]["videogallery"] as $video): ?>
   <div class="column">
-    <video src='<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>'></video>
+    <video autoplay loop>
+      <source src="<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
   </div>
 <?php endforeach; ?>
 
@@ -46,6 +49,7 @@
 $prevpage = ($id - 1 + count($projects)) % count($projects); // wrap backwards
 $nextpage = ($id + 1) % count($projects);                   // wrap forwards
 ?>
+
 <div class="project-nav">
   <a class="prev" href="individualProject.php?id=<?= $prevpage ?>">
     ← <?= $projects[$prevpage]['title'] ?>
