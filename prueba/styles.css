@@ -7,6 +7,10 @@ body {
   text-align: center;
 }
 
+.dark-mode {
+  background-color: #38444d;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -29,6 +33,37 @@ li a {
 
 li a:hover {
   background-color: white;
+  color: #4D4138;
+}
+
+.dark-mode p,
+.dark-mode pre, 
+.dark-mode li a {
+  color: #e0e0e0 !important;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-btn i {
+  font-size: 18px;
+  vertical-align: middle;
+  transition: color 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: white;
+  color: #4D4138;
+}
+
+.nav-btn:hover i {
   color: #4D4138;
 }
 
@@ -121,6 +156,10 @@ a {
   border-radius: 5px;
 }
 
+.dark-mode .project-info {
+  background-color: #2A2E33;
+}
+
 .project-text {
   text-align: left;
 }
@@ -162,6 +201,12 @@ a {
 .project-nav a:hover {
   background-color: #38444d;
   transform: translateY(-2px);
+}
+
+.dark-mode .project-nav a,
+.dark-mode .project-nav a:hover {
+  color: #38444d;
+  background-color: #e0e0e0;
 }
 
 footer {
