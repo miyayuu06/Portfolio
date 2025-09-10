@@ -4,15 +4,13 @@
 
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles.css?v=1.0">
 <title>Page Title</title>
 </head>
 
 <body>
 
-<ul>
-  <li><a href="pagina.php">Projects</li>
-</ul>
+<?php include("navi.php")?>
 
 <header style="background-image:url(photos/renderer/superbanner.png);">
   <h1>YUNA'S PROJECT CORNER</h1>
@@ -34,7 +32,7 @@
   </div>
 <?php endfor; ?>
 
-<footer>Yuna Yunita :)</footer>
+<?php include("footer.php")?>
 
 </body>
 </html>

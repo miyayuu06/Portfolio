@@ -11,9 +11,7 @@
 
 <body>
 
-<ul>
-  <li><a href="pagina.php">Projects</a></li>
-</ul>
+<?php include("navi.php")?>
 
 <header style="background-image:url('photos/<?=$projects[$id]['dir']?>/cover.png');">
   <h1><?=$projects[$id]['title']?></h1>
@@ -59,7 +57,7 @@ $nextpage = ($id + 1) % count($projects);                   // wrap forwards
   </a>
 </div>
 
-<footer>Yuna Yunita :)</footer>
+<?php include("footer.php")?>
 
 </body>
 </html>

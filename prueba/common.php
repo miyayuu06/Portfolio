@@ -1,1 +1,0 @@
-// Definición de componentes comunes (header, footer, ...)
