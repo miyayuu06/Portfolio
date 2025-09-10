@@ -38,7 +38,8 @@ li a:hover {
 
 .dark-mode p,
 .dark-mode pre, 
-.dark-mode li a {
+.dark-mode li a,
+.dark-mode .date {
   color: #e0e0e0 !important;
 }
 
@@ -46,9 +47,10 @@ li a:hover {
   background: none;
   border: none;
   color: white;
+  font-size: 18px;
   text-align: center;
-  padding: 14px 16px;
-  font-size: 16px;
+  padding: 18px 18px;
+  display: flex;
   cursor: pointer;
 }
 
