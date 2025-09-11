@@ -29,13 +29,15 @@
 
 <?php foreach ($projects[$id]['gallery'] as $img): ?>
   <div class="column">
-    <img src='<?= "photos/" . $projects[$id]['dir'] . "/" . $img ?>'>
+    <img src="<?= "photos/" . $projects[$id]['dir'] . "/" . $img ?>" 
+         alt="Thumbnail"
+         onclick="openModal(this.src, 'image')">
   </div>
 <?php endforeach; ?>
 
 <?php foreach ($projects[$id]["videogallery"] as $video): ?>
   <div class="column">
-    <video autoplay loop>
+    <video autoplay loop onclick="openModal('<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>', 'video')">
       <source src="<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -58,7 +60,43 @@ $nextpage = ($id + 1) % count($projects);                   // wrap forwards
   </a>
 </div>
 
+<div id="galleryModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <video controls id="modalVideo" style="display:none;"></video>
+</div>
+
 <?php include("footer.php")?>
+
+
+<script>
+function openModal(src, type) {
+  const modal = document.getElementById("galleryModal");
+  const modalImage = document.getElementById("modalImage");
+  const modalVideo = document.getElementById("modalVideo");
+
+  modal.style.display = "block";
+
+  if (type === "image") {
+    modalImage.src = src;
+    modalImage.style.display = "block";
+    modalVideo.style.display = "none";
+  } else {
+    modalVideo.src = src;
+    modalVideo.style.display = "block";
+    modalImage.style.display = "none";
+  }
+}
+
+function closeModal() {
+  const modal = document.getElementById("galleryModal");
+  modal.style.display = "none";
+
+  // stop video when closing
+  document.getElementById("modalVideo").pause();
+  document.getElementById("modalVideo").src = "";
+}
+</script>
 
 </body>
 </html>
