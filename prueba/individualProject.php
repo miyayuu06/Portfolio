@@ -63,7 +63,7 @@ $nextpage = ($id + 1) % count($projects);                   // wrap forwards
 <div id="galleryModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
-  <video controls id="modalVideo" style="display:none;"></video>
+  <video autoplay loop id="modalVideo" style="display:none;"></video>
 </div>
 
 <?php include("footer.php")?>
