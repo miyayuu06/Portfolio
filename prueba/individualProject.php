@@ -37,7 +37,7 @@
 
 <?php foreach ($projects[$id]["videogallery"] as $video): ?>
   <div class="column">
-    <video autoplay loop onclick="openModal('<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>', 'video')">
+    <video muted autoplay loop onclick="openModal('<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>', 'video')">
       <source src="<?= "photos/" . $projects[$id]['dir'] . "/" . $video ?>" type="video/mp4">
       Your browser does not support the video tag.
     </video>
@@ -53,17 +53,17 @@ $nextpage = ($id + 1) % count($projects);                   // wrap forwards
 
 <div class="project-nav">
   <a class="prev" href="individualProject.php?id=<?= $prevpage ?>">
-    ← <?= $projects[$prevpage]['title'] ?>
+    <?= $projects[$prevpage]['title'] ?>
   </a>
   <a class="next" href="individualProject.php?id=<?= $nextpage ?>">
-    <?= $projects[$nextpage]['title'] ?> →
+    <?= $projects[$nextpage]['title'] ?>
   </a>
 </div>
 
 <div id="galleryModal" class="modal">
   <span class="close" onclick="closeModal()">&times;</span>
   <img class="modal-content" id="modalImage">
-  <video autoplay loop id="modalVideo" style="display:none;"></video>
+  <video autoplay loop id="modalVideo" style="display:none; volume=100%;"></video>
 </div>
 
 <?php include("footer.php")?>
@@ -92,7 +92,6 @@ function closeModal() {
   const modal = document.getElementById("galleryModal");
   modal.style.display = "none";
 
-  // stop video when closing
   document.getElementById("modalVideo").pause();
   document.getElementById("modalVideo").src = "";
 }
